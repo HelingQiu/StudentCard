@@ -1,0 +1,670 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		DA3641011CAE77EA00078926 /* StudentCardApiLipo */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = DA3641021CAE77EA00078926 /* Build configuration list for PBXAggregateTarget "StudentCardApiLipo" */;
+			buildPhases = (
+				DA3641051CAE77F400078926 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = StudentCardApiLipo;
+			productName = StudentCardApiLipo;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		628A916A1CB7F08E00A7D94C /* TypeDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 628A91691CB7EF4100A7D94C /* TypeDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D50764BC1CAFC038004F603C /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D50764AF1CAFC038004F603C /* AFHTTPSessionManager.h */; };
+		D50764BD1CAFC038004F603C /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D50764B01CAFC038004F603C /* AFHTTPSessionManager.m */; };
+		D50764BE1CAFC038004F603C /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D50764B11CAFC038004F603C /* AFNetworking.h */; };
+		D50764BF1CAFC038004F603C /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D50764B21CAFC038004F603C /* AFNetworkReachabilityManager.h */; };
+		D50764C01CAFC038004F603C /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D50764B31CAFC038004F603C /* AFNetworkReachabilityManager.m */; };
+		D50764C11CAFC038004F603C /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = D50764B41CAFC038004F603C /* AFSecurityPolicy.h */; };
+		D50764C21CAFC038004F603C /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = D50764B51CAFC038004F603C /* AFSecurityPolicy.m */; };
+		D50764C31CAFC038004F603C /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = D50764B61CAFC038004F603C /* AFURLRequestSerialization.h */; };
+		D50764C41CAFC038004F603C /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = D50764B71CAFC038004F603C /* AFURLRequestSerialization.m */; };
+		D50764C51CAFC038004F603C /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = D50764B81CAFC038004F603C /* AFURLResponseSerialization.h */; };
+		D50764C61CAFC038004F603C /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = D50764B91CAFC038004F603C /* AFURLResponseSerialization.m */; };
+		D50764C71CAFC038004F603C /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D50764BA1CAFC038004F603C /* AFURLSessionManager.h */; };
+		D50764C81CAFC038004F603C /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D50764BB1CAFC038004F603C /* AFURLSessionManager.m */; };
+		D50764DE1CAFC07A004F603C /* AFAutoPurgingImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = D50764CA1CAFC07A004F603C /* AFAutoPurgingImageCache.h */; };
+		D50764DF1CAFC07A004F603C /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D50764CB1CAFC07A004F603C /* AFAutoPurgingImageCache.m */; };
+		D50764E01CAFC07A004F603C /* AFImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = D50764CC1CAFC07A004F603C /* AFImageDownloader.h */; };
+		D50764E11CAFC07A004F603C /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D50764CD1CAFC07A004F603C /* AFImageDownloader.m */; };
+		D50764E21CAFC07A004F603C /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D50764CE1CAFC07A004F603C /* AFNetworkActivityIndicatorManager.h */; };
+		D50764E31CAFC07A004F603C /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D50764CF1CAFC07A004F603C /* AFNetworkActivityIndicatorManager.m */; };
+		D50764E41CAFC07A004F603C /* UIActivityIndicatorView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D50764D01CAFC07A004F603C /* UIActivityIndicatorView+AFNetworking.h */; };
+		D50764E51CAFC07A004F603C /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D50764D11CAFC07A004F603C /* UIActivityIndicatorView+AFNetworking.m */; };
+		D50764E61CAFC07A004F603C /* UIButton+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D50764D21CAFC07A004F603C /* UIButton+AFNetworking.h */; };
+		D50764E71CAFC07A004F603C /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D50764D31CAFC07A004F603C /* UIButton+AFNetworking.m */; };
+		D50764E81CAFC07A004F603C /* UIImage+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D50764D41CAFC07A004F603C /* UIImage+AFNetworking.h */; };
+		D50764E91CAFC07A004F603C /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D50764D51CAFC07A004F603C /* UIImageView+AFNetworking.h */; };
+		D50764EA1CAFC07A004F603C /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D50764D61CAFC07A004F603C /* UIImageView+AFNetworking.m */; };
+		D50764EB1CAFC07A004F603C /* UIKit+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D50764D71CAFC07A004F603C /* UIKit+AFNetworking.h */; };
+		D50764EC1CAFC07A004F603C /* UIProgressView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D50764D81CAFC07A004F603C /* UIProgressView+AFNetworking.h */; };
+		D50764ED1CAFC07A004F603C /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D50764D91CAFC07A004F603C /* UIProgressView+AFNetworking.m */; };
+		D50764EE1CAFC07A004F603C /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D50764DA1CAFC07A004F603C /* UIRefreshControl+AFNetworking.h */; };
+		D50764EF1CAFC07A004F603C /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D50764DB1CAFC07A004F603C /* UIRefreshControl+AFNetworking.m */; };
+		D50764F01CAFC07A004F603C /* UIWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D50764DC1CAFC07A004F603C /* UIWebView+AFNetworking.h */; };
+		D50764F11CAFC07A004F603C /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D50764DD1CAFC07A004F603C /* UIWebView+AFNetworking.m */; };
+		D50764F41CAFC410004F603C /* KinNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D50764F21CAFC410004F603C /* KinNetworking.h */; };
+		D50764F51CAFC410004F603C /* KinNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D50764F31CAFC410004F603C /* KinNetworking.m */; };
+		D5B1EC5B1CB1865D005900D4 /* KinLocationApi.h in Headers */ = {isa = PBXBuildFile; fileRef = D5B1EC591CB1865D005900D4 /* KinLocationApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5B1EC5C1CB1865D005900D4 /* KinLocationApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B1EC5A1CB1865D005900D4 /* KinLocationApi.m */; };
+		D5B1EC5F1CB18685005900D4 /* KinRecordApi.h in Headers */ = {isa = PBXBuildFile; fileRef = D5B1EC5D1CB18685005900D4 /* KinRecordApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5B1EC601CB18685005900D4 /* KinRecordApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B1EC5E1CB18685005900D4 /* KinRecordApi.m */; };
+		D5B1EC631CB186A2005900D4 /* KinFileApi.h in Headers */ = {isa = PBXBuildFile; fileRef = D5B1EC611CB186A2005900D4 /* KinFileApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5B1EC641CB186A2005900D4 /* KinFileApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B1EC621CB186A2005900D4 /* KinFileApi.m */; };
+		D5EE89AB1CB104A3006E76BA /* KinGuardTool.h in Headers */ = {isa = PBXBuildFile; fileRef = D5EE89A91CB104A3006E76BA /* KinGuardTool.h */; };
+		D5EE89AC1CB104A3006E76BA /* KinGuardTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D5EE89AA1CB104A3006E76BA /* KinGuardTool.m */; };
+		D5EE89B81CB14F2E006E76BA /* HostDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = D5EE89B71CB14F2E006E76BA /* HostDefines.h */; };
+		D5EE89BF1CB160A6006E76BA /* KinDeviceApi.h in Headers */ = {isa = PBXBuildFile; fileRef = D5EE89BD1CB160A6006E76BA /* KinDeviceApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5EE89C01CB160A6006E76BA /* KinDeviceApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D5EE89BE1CB160A6006E76BA /* KinDeviceApi.m */; };
+		DA3640A71CAE767B00078926 /* StudentCardApi.h in Headers */ = {isa = PBXBuildFile; fileRef = DA3640A61CAE767B00078926 /* StudentCardApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA3640AE1CAE767B00078926 /* StudentCardApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3640A31CAE767B00078926 /* StudentCardApi.framework */; };
+		DA3640B31CAE767B00078926 /* StudentCardApiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3640B21CAE767B00078926 /* StudentCardApiTests.m */; };
+		DA3641081CAE791A00078926 /* KinGuartApi.h in Headers */ = {isa = PBXBuildFile; fileRef = DA3641061CAE791A00078926 /* KinGuartApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA3641091CAE791A00078926 /* KinGuartApi.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3641071CAE791A00078926 /* KinGuartApi.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA3640AF1CAE767B00078926 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA36409A1CAE767B00078926 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA3640A21CAE767B00078926;
+			remoteInfo = StudentCardApi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		628A91691CB7EF4100A7D94C /* TypeDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeDefines.h; sourceTree = "<group>"; };
+		D50764AF1CAFC038004F603C /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		D50764B01CAFC038004F603C /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		D50764B11CAFC038004F603C /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		D50764B21CAFC038004F603C /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		D50764B31CAFC038004F603C /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		D50764B41CAFC038004F603C /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		D50764B51CAFC038004F603C /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		D50764B61CAFC038004F603C /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		D50764B71CAFC038004F603C /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		D50764B81CAFC038004F603C /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		D50764B91CAFC038004F603C /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		D50764BA1CAFC038004F603C /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		D50764BB1CAFC038004F603C /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		D50764CA1CAFC07A004F603C /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAutoPurgingImageCache.h; sourceTree = "<group>"; };
+		D50764CB1CAFC07A004F603C /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAutoPurgingImageCache.m; sourceTree = "<group>"; };
+		D50764CC1CAFC07A004F603C /* AFImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageDownloader.h; sourceTree = "<group>"; };
+		D50764CD1CAFC07A004F603C /* AFImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloader.m; sourceTree = "<group>"; };
+		D50764CE1CAFC07A004F603C /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		D50764CF1CAFC07A004F603C /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		D50764D01CAFC07A004F603C /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
+		D50764D11CAFC07A004F603C /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
+		D50764D21CAFC07A004F603C /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+AFNetworking.h"; sourceTree = "<group>"; };
+		D50764D31CAFC07A004F603C /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+AFNetworking.m"; sourceTree = "<group>"; };
+		D50764D41CAFC07A004F603C /* UIImage+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AFNetworking.h"; sourceTree = "<group>"; };
+		D50764D51CAFC07A004F603C /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		D50764D61CAFC07A004F603C /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		D50764D71CAFC07A004F603C /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+AFNetworking.h"; sourceTree = "<group>"; };
+		D50764D81CAFC07A004F603C /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
+		D50764D91CAFC07A004F603C /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
+		D50764DA1CAFC07A004F603C /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
+		D50764DB1CAFC07A004F603C /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
+		D50764DC1CAFC07A004F603C /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
+		D50764DD1CAFC07A004F603C /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		D50764F21CAFC410004F603C /* KinNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KinNetworking.h; sourceTree = "<group>"; };
+		D50764F31CAFC410004F603C /* KinNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KinNetworking.m; sourceTree = "<group>"; };
+		D5B1EC591CB1865D005900D4 /* KinLocationApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KinLocationApi.h; sourceTree = "<group>"; };
+		D5B1EC5A1CB1865D005900D4 /* KinLocationApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KinLocationApi.m; sourceTree = "<group>"; };
+		D5B1EC5D1CB18685005900D4 /* KinRecordApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KinRecordApi.h; sourceTree = "<group>"; };
+		D5B1EC5E1CB18685005900D4 /* KinRecordApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KinRecordApi.m; sourceTree = "<group>"; };
+		D5B1EC611CB186A2005900D4 /* KinFileApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KinFileApi.h; sourceTree = "<group>"; };
+		D5B1EC621CB186A2005900D4 /* KinFileApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KinFileApi.m; sourceTree = "<group>"; };
+		D5EE89A91CB104A3006E76BA /* KinGuardTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KinGuardTool.h; sourceTree = "<group>"; };
+		D5EE89AA1CB104A3006E76BA /* KinGuardTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KinGuardTool.m; sourceTree = "<group>"; };
+		D5EE89B71CB14F2E006E76BA /* HostDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostDefines.h; sourceTree = "<group>"; };
+		D5EE89BD1CB160A6006E76BA /* KinDeviceApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KinDeviceApi.h; sourceTree = "<group>"; };
+		D5EE89BE1CB160A6006E76BA /* KinDeviceApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KinDeviceApi.m; sourceTree = "<group>"; };
+		DA3640A31CAE767B00078926 /* StudentCardApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StudentCardApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA3640A61CAE767B00078926 /* StudentCardApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentCardApi.h; sourceTree = "<group>"; };
+		DA3640A81CAE767B00078926 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA3640AD1CAE767B00078926 /* StudentCardApiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudentCardApiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA3640B21CAE767B00078926 /* StudentCardApiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentCardApiTests.m; sourceTree = "<group>"; };
+		DA3640B41CAE767B00078926 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA3641061CAE791A00078926 /* KinGuartApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KinGuartApi.h; sourceTree = "<group>"; };
+		DA3641071CAE791A00078926 /* KinGuartApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KinGuartApi.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA36409F1CAE767B00078926 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA3640AA1CAE767B00078926 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA3640AE1CAE767B00078926 /* StudentCardApi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D50764AE1CAFC038004F603C /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				D50764AF1CAFC038004F603C /* AFHTTPSessionManager.h */,
+				D50764B01CAFC038004F603C /* AFHTTPSessionManager.m */,
+				D50764B11CAFC038004F603C /* AFNetworking.h */,
+				D50764B21CAFC038004F603C /* AFNetworkReachabilityManager.h */,
+				D50764B31CAFC038004F603C /* AFNetworkReachabilityManager.m */,
+				D50764B41CAFC038004F603C /* AFSecurityPolicy.h */,
+				D50764B51CAFC038004F603C /* AFSecurityPolicy.m */,
+				D50764B61CAFC038004F603C /* AFURLRequestSerialization.h */,
+				D50764B71CAFC038004F603C /* AFURLRequestSerialization.m */,
+				D50764B81CAFC038004F603C /* AFURLResponseSerialization.h */,
+				D50764B91CAFC038004F603C /* AFURLResponseSerialization.m */,
+				D50764BA1CAFC038004F603C /* AFURLSessionManager.h */,
+				D50764BB1CAFC038004F603C /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		D50764C91CAFC07A004F603C /* UIKit+AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				D50764CA1CAFC07A004F603C /* AFAutoPurgingImageCache.h */,
+				D50764CB1CAFC07A004F603C /* AFAutoPurgingImageCache.m */,
+				D50764CC1CAFC07A004F603C /* AFImageDownloader.h */,
+				D50764CD1CAFC07A004F603C /* AFImageDownloader.m */,
+				D50764CE1CAFC07A004F603C /* AFNetworkActivityIndicatorManager.h */,
+				D50764CF1CAFC07A004F603C /* AFNetworkActivityIndicatorManager.m */,
+				D50764D01CAFC07A004F603C /* UIActivityIndicatorView+AFNetworking.h */,
+				D50764D11CAFC07A004F603C /* UIActivityIndicatorView+AFNetworking.m */,
+				D50764D21CAFC07A004F603C /* UIButton+AFNetworking.h */,
+				D50764D31CAFC07A004F603C /* UIButton+AFNetworking.m */,
+				D50764D41CAFC07A004F603C /* UIImage+AFNetworking.h */,
+				D50764D51CAFC07A004F603C /* UIImageView+AFNetworking.h */,
+				D50764D61CAFC07A004F603C /* UIImageView+AFNetworking.m */,
+				D50764D71CAFC07A004F603C /* UIKit+AFNetworking.h */,
+				D50764D81CAFC07A004F603C /* UIProgressView+AFNetworking.h */,
+				D50764D91CAFC07A004F603C /* UIProgressView+AFNetworking.m */,
+				D50764DA1CAFC07A004F603C /* UIRefreshControl+AFNetworking.h */,
+				D50764DB1CAFC07A004F603C /* UIRefreshControl+AFNetworking.m */,
+				D50764DC1CAFC07A004F603C /* UIWebView+AFNetworking.h */,
+				D50764DD1CAFC07A004F603C /* UIWebView+AFNetworking.m */,
+			);
+			path = "UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		DA3640991CAE767B00078926 = {
+			isa = PBXGroup;
+			children = (
+				DA3640A51CAE767B00078926 /* StudentCardApi */,
+				DA3640B11CAE767B00078926 /* StudentCardApiTests */,
+				DA3640A41CAE767B00078926 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA3640A41CAE767B00078926 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA3640A31CAE767B00078926 /* StudentCardApi.framework */,
+				DA3640AD1CAE767B00078926 /* StudentCardApiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA3640A51CAE767B00078926 /* StudentCardApi */ = {
+			isa = PBXGroup;
+			children = (
+				DA3640A61CAE767B00078926 /* StudentCardApi.h */,
+				628A91691CB7EF4100A7D94C /* TypeDefines.h */,
+				D5EE89B71CB14F2E006E76BA /* HostDefines.h */,
+				DA3641061CAE791A00078926 /* KinGuartApi.h */,
+				DA3641071CAE791A00078926 /* KinGuartApi.m */,
+				D5EE89BD1CB160A6006E76BA /* KinDeviceApi.h */,
+				D5EE89BE1CB160A6006E76BA /* KinDeviceApi.m */,
+				D5B1EC591CB1865D005900D4 /* KinLocationApi.h */,
+				D5B1EC5A1CB1865D005900D4 /* KinLocationApi.m */,
+				D5B1EC5D1CB18685005900D4 /* KinRecordApi.h */,
+				D5B1EC5E1CB18685005900D4 /* KinRecordApi.m */,
+				D5B1EC611CB186A2005900D4 /* KinFileApi.h */,
+				D5B1EC621CB186A2005900D4 /* KinFileApi.m */,
+				D50764F21CAFC410004F603C /* KinNetworking.h */,
+				D50764F31CAFC410004F603C /* KinNetworking.m */,
+				D5EE89A91CB104A3006E76BA /* KinGuardTool.h */,
+				D5EE89AA1CB104A3006E76BA /* KinGuardTool.m */,
+				DA3640A81CAE767B00078926 /* Info.plist */,
+				D50764C91CAFC07A004F603C /* UIKit+AFNetworking */,
+				D50764AE1CAFC038004F603C /* AFNetworking */,
+			);
+			path = StudentCardApi;
+			sourceTree = "<group>";
+		};
+		DA3640B11CAE767B00078926 /* StudentCardApiTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA3640B21CAE767B00078926 /* StudentCardApiTests.m */,
+				DA3640B41CAE767B00078926 /* Info.plist */,
+			);
+			path = StudentCardApiTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DA3640A01CAE767B00078926 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D50764EB1CAFC07A004F603C /* UIKit+AFNetworking.h in Headers */,
+				D5B1EC5B1CB1865D005900D4 /* KinLocationApi.h in Headers */,
+				D5B1EC5F1CB18685005900D4 /* KinRecordApi.h in Headers */,
+				D5B1EC631CB186A2005900D4 /* KinFileApi.h in Headers */,
+				D5EE89AB1CB104A3006E76BA /* KinGuardTool.h in Headers */,
+				D5EE89BF1CB160A6006E76BA /* KinDeviceApi.h in Headers */,
+				628A916A1CB7F08E00A7D94C /* TypeDefines.h in Headers */,
+				D50764EC1CAFC07A004F603C /* UIProgressView+AFNetworking.h in Headers */,
+				D50764DE1CAFC07A004F603C /* AFAutoPurgingImageCache.h in Headers */,
+				D50764C71CAFC038004F603C /* AFURLSessionManager.h in Headers */,
+				DA3640A71CAE767B00078926 /* StudentCardApi.h in Headers */,
+				D5EE89B81CB14F2E006E76BA /* HostDefines.h in Headers */,
+				D50764C51CAFC038004F603C /* AFURLResponseSerialization.h in Headers */,
+				DA3641081CAE791A00078926 /* KinGuartApi.h in Headers */,
+				D50764F01CAFC07A004F603C /* UIWebView+AFNetworking.h in Headers */,
+				D50764E61CAFC07A004F603C /* UIButton+AFNetworking.h in Headers */,
+				D50764E91CAFC07A004F603C /* UIImageView+AFNetworking.h in Headers */,
+				D50764C31CAFC038004F603C /* AFURLRequestSerialization.h in Headers */,
+				D50764EE1CAFC07A004F603C /* UIRefreshControl+AFNetworking.h in Headers */,
+				D50764BF1CAFC038004F603C /* AFNetworkReachabilityManager.h in Headers */,
+				D50764C11CAFC038004F603C /* AFSecurityPolicy.h in Headers */,
+				D50764E81CAFC07A004F603C /* UIImage+AFNetworking.h in Headers */,
+				D50764E01CAFC07A004F603C /* AFImageDownloader.h in Headers */,
+				D50764BC1CAFC038004F603C /* AFHTTPSessionManager.h in Headers */,
+				D50764BE1CAFC038004F603C /* AFNetworking.h in Headers */,
+				D50764F41CAFC410004F603C /* KinNetworking.h in Headers */,
+				D50764E21CAFC07A004F603C /* AFNetworkActivityIndicatorManager.h in Headers */,
+				D50764E41CAFC07A004F603C /* UIActivityIndicatorView+AFNetworking.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DA3640A21CAE767B00078926 /* StudentCardApi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA3640B71CAE767B00078926 /* Build configuration list for PBXNativeTarget "StudentCardApi" */;
+			buildPhases = (
+				DA36409E1CAE767B00078926 /* Sources */,
+				DA36409F1CAE767B00078926 /* Frameworks */,
+				DA3640A01CAE767B00078926 /* Headers */,
+				DA3640A11CAE767B00078926 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StudentCardApi;
+			productName = StudentCardApi;
+			productReference = DA3640A31CAE767B00078926 /* StudentCardApi.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DA3640AC1CAE767B00078926 /* StudentCardApiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA3640BA1CAE767B00078926 /* Build configuration list for PBXNativeTarget "StudentCardApiTests" */;
+			buildPhases = (
+				DA3640A91CAE767B00078926 /* Sources */,
+				DA3640AA1CAE767B00078926 /* Frameworks */,
+				DA3640AB1CAE767B00078926 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA3640B01CAE767B00078926 /* PBXTargetDependency */,
+			);
+			name = StudentCardApiTests;
+			productName = StudentCardApiTests;
+			productReference = DA3640AD1CAE767B00078926 /* StudentCardApiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA36409A1CAE767B00078926 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "JJS-iMac";
+				TargetAttributes = {
+					DA3640A21CAE767B00078926 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					DA3640AC1CAE767B00078926 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					DA3641011CAE77EA00078926 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = DA36409D1CAE767B00078926 /* Build configuration list for PBXProject "StudentCardApi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DA3640991CAE767B00078926;
+			productRefGroup = DA3640A41CAE767B00078926 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA3640A21CAE767B00078926 /* StudentCardApi */,
+				DA3640AC1CAE767B00078926 /* StudentCardApiTests */,
+				DA3641011CAE77EA00078926 /* StudentCardApiLipo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA3640A11CAE767B00078926 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA3640AB1CAE767B00078926 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DA3641051CAE77F400078926 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Sets the target folders and the final framework product.\n# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\n# 例如: FMK_NAME = \"MyFramework\"\nFMK_NAME=\"StudentCardApi\"\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n# Working dir will be deleted after the framework creation.\n#WRK_DIR=${SYMROOT}\nWRK_DIR=${SRCROOT}/build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n# -configuration ${CONFIGURATION}\n# Clean and Building both architectures.\n#xcodebuild clean\n\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos clean build\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator build\n\n\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\nmkdir -p \"${INSTALL_DIR}\"\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\nrm -r \"${WRK_DIR}\"\nopen \"${INSTALL_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA36409E1CAE767B00078926 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5B1EC5C1CB1865D005900D4 /* KinLocationApi.m in Sources */,
+				D5B1EC641CB186A2005900D4 /* KinFileApi.m in Sources */,
+				D50764ED1CAFC07A004F603C /* UIProgressView+AFNetworking.m in Sources */,
+				D50764C21CAFC038004F603C /* AFSecurityPolicy.m in Sources */,
+				D50764EF1CAFC07A004F603C /* UIRefreshControl+AFNetworking.m in Sources */,
+				D50764EA1CAFC07A004F603C /* UIImageView+AFNetworking.m in Sources */,
+				D50764F11CAFC07A004F603C /* UIWebView+AFNetworking.m in Sources */,
+				DA3641091CAE791A00078926 /* KinGuartApi.m in Sources */,
+				D50764E71CAFC07A004F603C /* UIButton+AFNetworking.m in Sources */,
+				D50764E11CAFC07A004F603C /* AFImageDownloader.m in Sources */,
+				D50764E51CAFC07A004F603C /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				D50764C41CAFC038004F603C /* AFURLRequestSerialization.m in Sources */,
+				D5B1EC601CB18685005900D4 /* KinRecordApi.m in Sources */,
+				D50764E31CAFC07A004F603C /* AFNetworkActivityIndicatorManager.m in Sources */,
+				D5EE89C01CB160A6006E76BA /* KinDeviceApi.m in Sources */,
+				D50764C81CAFC038004F603C /* AFURLSessionManager.m in Sources */,
+				D50764C01CAFC038004F603C /* AFNetworkReachabilityManager.m in Sources */,
+				D50764C61CAFC038004F603C /* AFURLResponseSerialization.m in Sources */,
+				D50764BD1CAFC038004F603C /* AFHTTPSessionManager.m in Sources */,
+				D50764F51CAFC410004F603C /* KinNetworking.m in Sources */,
+				D50764DF1CAFC07A004F603C /* AFAutoPurgingImageCache.m in Sources */,
+				D5EE89AC1CB104A3006E76BA /* KinGuardTool.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA3640A91CAE767B00078926 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA3640B31CAE767B00078926 /* StudentCardApiTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA3640B01CAE767B00078926 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA3640A21CAE767B00078926 /* StudentCardApi */;
+			targetProxy = DA3640AF1CAE767B00078926 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DA3640B51CAE767B00078926 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DA3640B61CAE767B00078926 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DA3640B81CAE767B00078926 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = StudentCardApi/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rt.StudentCardApi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DA3640B91CAE767B00078926 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = StudentCardApi/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rt.StudentCardApi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DA3640BB1CAE767B00078926 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = StudentCardApiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rt.StudentCardApiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DA3640BC1CAE767B00078926 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = StudentCardApiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rt.StudentCardApiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DA3641031CAE77EA00078926 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DA3641041CAE77EA00078926 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA36409D1CAE767B00078926 /* Build configuration list for PBXProject "StudentCardApi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA3640B51CAE767B00078926 /* Debug */,
+				DA3640B61CAE767B00078926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA3640B71CAE767B00078926 /* Build configuration list for PBXNativeTarget "StudentCardApi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA3640B81CAE767B00078926 /* Debug */,
+				DA3640B91CAE767B00078926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA3640BA1CAE767B00078926 /* Build configuration list for PBXNativeTarget "StudentCardApiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA3640BB1CAE767B00078926 /* Debug */,
+				DA3640BC1CAE767B00078926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA3641021CAE77EA00078926 /* Build configuration list for PBXAggregateTarget "StudentCardApiLipo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA3641031CAE77EA00078926 /* Debug */,
+				DA3641041CAE77EA00078926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA36409A1CAE767B00078926 /* Project object */;
+}
