@@ -158,11 +158,11 @@
 {
 
      //通过二维码绑定
-//     [[KinDeviceApi sharedKinDevice] bindDeviceByQRCode:@"042bd75cb0bf4cdcad4d77038baec47e3ec5" success:^(NSDictionary *data) {
-//          NSLog(@"qrcode:%@",data);
-//     } fail:^(NSString *error) {
-//          NSLog(@"qrcode:%@",error);
-//     }];
+     [[KinDeviceApi sharedKinDevice] bindDeviceByQRCode:@"042bd75cb0bf4cdcad4d77038baec47e3ec5" success:^(NSDictionary *data) {
+          NSLog(@"qrcode:%@",data);
+     } fail:^(NSString *error) {
+          NSLog(@"qrcode:%@",error);
+     }];
  
      
      //通过设备 ID 绑定
@@ -208,13 +208,13 @@
 //     }];
     
     //宝贝列表
-    [[KinDeviceApi sharedKinDevice] deviceListSuccess:^(NSDictionary *data) {
-        
-        NSLog(@"device info:%@",data);
-    } fail:^(NSString *error) {
-        NSLog(@"device info:%@",error);
-        
-    }];
+//    [[KinDeviceApi sharedKinDevice] deviceListSuccess:^(NSDictionary *data) {
+//        
+//        NSLog(@"device info:%@",data);
+//    } fail:^(NSString *error) {
+//        NSLog(@"device info:%@",error);
+//        
+//    }];
 
     //宝贝信息
 //    [[KinDeviceApi sharedKinDevice] deviceInfoPid:@"c202237b" success:^(NSDictionary *data) {

@@ -63,17 +63,20 @@
                 }else{
                     if ([[data objectForKey:@"state"] integerValue] == 2) {
                         //关注 （被别人绑定之后）
-                        [self bindFollowByQRCode:qrcode withSmscode:nil success:^(NSDictionary *data) {
-                            if ([[data objectForKey:@"state"] integerValue] == 0) {
-                                [self bindDeviceByQRCode:qrcode success:successed fail:failed];
-                            }else if ([[data objectForKey:@"state"] integerValue] == 1){
-                                successed(data);
-                            }else{
-                                failed([data objectForKey:@"desc"]);
-                            }
-                        } fail:^(NSString *error) {
-                            failed(@"关注失败");
-                        }];
+                        successed(data);
+//                        [self bindFollowByQRCode:qrcode withSmscode:@"" success:^(NSDictionary *data) {
+//                            if ([[data objectForKey:@"state"] integerValue] == 0) {
+//                                [self bindDeviceByQRCode:qrcode success:successed fail:failed];
+//                            }else if ([[data objectForKey:@"state"] integerValue] == 1){
+//                                successed(data);
+//                            }else if ([[data objectForKey:@"state"] integerValue] == 5){
+//                                successed(data);
+//                            }else{
+//                                failed([data objectForKey:@"desc"]);
+//                            }
+//                        } fail:^(NSString *error) {
+//                            failed(@"关注失败");
+//                        }];
                     }else{
                         failed([data objectForKey:@"desc"]);
                     }
@@ -113,17 +116,20 @@
                 }else{
                     if ([[data objectForKey:@"state"] integerValue] == 2) {
                         //关注 （被别人绑定之后）
-                        [self bindFollowByPid:pid withKey:akey withSmscode:nil success:^(NSDictionary *data) {
-                            if ([[data objectForKey:@"state"] integerValue] == 0) {
-                                [self bindDeviceByPid:pid withKey:akey success:successed fail:failed];
-                            }else if ([[data objectForKey:@"state"] integerValue] == 1){
-                                successed(data);
-                            }else{
-                                failed([data objectForKey:@"desc"]);
-                            }
-                        } fail:^(NSString *error) {
-                            failed(@"关注失败");
-                        }];
+                        successed(data);
+//                        [self bindFollowByPid:pid withKey:akey withSmscode:@"" success:^(NSDictionary *data) {
+//                            if ([[data objectForKey:@"state"] integerValue] == 0) {
+//                                [self bindDeviceByPid:pid withKey:akey success:successed fail:failed];
+//                            }else if ([[data objectForKey:@"state"] integerValue] == 1){
+//                                successed(data);
+//                            }else if ([[data objectForKey:@"state"] integerValue] == 5){
+//                                successed(data);
+//                            }else{
+//                                failed([data objectForKey:@"desc"]);
+//                            }
+//                        } fail:^(NSString *error) {
+//                            failed(@"关注失败");
+//                        }];
                         
                     }else{
                         failed([data objectForKey:@"desc"]);
