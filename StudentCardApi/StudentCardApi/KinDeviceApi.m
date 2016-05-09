@@ -152,10 +152,10 @@
                 }
             }];
         }else{
-            NSString *keyValueString = [NSString stringWithFormat:@"funname=%@&qrcode=%@",@"KinGuard_FollowRequestByQR",qrcode];
-            if (smscode != nil) {
-                keyValueString = [NSString stringWithFormat:@"funname=%@&qrcode=%@&smscode=%@",@"KinGuard_FollowRequestByQR",qrcode,smscode];
-            }
+//            NSString *keyValueString = [NSString stringWithFormat:@"funname=%@&qrcode=%@",@"KinGuard_FollowRequestByQR",qrcode];
+//            if (smscode != nil) {
+              NSString *keyValueString = [NSString stringWithFormat:@"funname=%@&qrcode=%@&smscode=%@",@"KinGuard_FollowRequestByQR",qrcode,smscode];
+//            }
             
             NSDictionary *body = [self returnParamers:keyValueString];
             
@@ -163,8 +163,9 @@
                 if ([[data objectForKey:@"state"] integerValue] == 0) {
                     successed(data);
                 }else if ([[data objectForKey:@"state"] integerValue] == 5){
-                    NSString *scode = [data objectForKey:@"smscode"];
-                    [self bindFollowByQRCode:qrcode withSmscode:scode success:successed fail:failed];
+//                    NSString *scode = [data objectForKey:@"smscode"];
+//                    [self bindFollowByQRCode:qrcode withSmscode:scode success:successed fail:failed];
+                    successed(data);
                 }else if ([[data objectForKey:@"state"] integerValue] == 1){
                     successed(data);
                 }else{
@@ -193,10 +194,10 @@
                 }
             }];
         }else{
-            NSString *keyValueString = [NSString stringWithFormat:@"akey=%@&funname=%@&pid=%@",akey,@"KinGuard_FollowRequestById",pid];
-            if (smscode != nil) {
-                keyValueString = [NSString stringWithFormat:@"akey=%@&funname=%@&pid=%@&smscode=%@",akey,@"KinGuard_FollowRequestById",pid,smscode];
-            }
+//            NSString *keyValueString = [NSString stringWithFormat:@"akey=%@&funname=%@&pid=%@",akey,@"KinGuard_FollowRequestById",pid];
+//            if (smscode != nil) {
+            NSString *keyValueString= keyValueString = [NSString stringWithFormat:@"akey=%@&funname=%@&pid=%@&smscode=%@",akey,@"KinGuard_FollowRequestById",pid,smscode];
+//            }
             
             NSDictionary *body = [self returnParamers:keyValueString];
             
