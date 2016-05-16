@@ -180,11 +180,22 @@
             NSDictionary *body = [self returnLoginParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuardUserInfoApi finished:^(NSDictionary *data) {
-                if ([[data objectForKey:@"state"] integerValue] == 0) {
-                    successed(data);
+                //token失效时
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self updateUserInfoWithMobile:mobile withAddr:addr withIddno:iddno withAccName:accname withAlias:alias withSex:sex withBirthdate:birthdate success:successed fail:failed];
+                        }
+                    }];
                 }else{
-                    failed([data objectForKey:@"desc"]);
+                    if ([[data objectForKey:@"state"] integerValue] == 0) {
+                        successed(data);
+                    }else{
+                        failed([data objectForKey:@"desc"]);
+                    }
                 }
+                
             } failed:^(NSString *error) {
                 failed(error);
             }];
@@ -213,12 +224,22 @@
             NSDictionary *body = [self returnLoginParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuardUserInfoApi finished:^(NSDictionary *data) {
-                
-                if ([[data objectForKey:@"state"] integerValue] == 0) {
-                    successed(data);
+                //token失效时
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self getUserInfoSuccess:successed fail:failed];
+                        }
+                    }];
                 }else{
-                    failed([data objectForKey:@"desc"]);
+                    if ([[data objectForKey:@"state"] integerValue] == 0) {
+                        successed(data);
+                    }else{
+                        failed([data objectForKey:@"desc"]);
+                    }
                 }
+                
             } failed:^(NSString *error) {
                 failed(error);
             }];

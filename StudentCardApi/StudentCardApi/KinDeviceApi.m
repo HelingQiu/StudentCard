@@ -57,30 +57,40 @@
             NSDictionary *body = [self returnParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuradDeviceApi finished:^(NSDictionary *data) {
-                
-                if ([[data objectForKey:@"state"] integerValue] == 0) {
-                    successed(data);
+                //token失效时
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self bindDeviceByQRCode:qrcode success:successed fail:failed];
+                        }
+                    }];
                 }else{
-                    if ([[data objectForKey:@"state"] integerValue] == 2) {
-                        //关注 （被别人绑定之后）
+                    if ([[data objectForKey:@"state"] integerValue] == 0) {
                         successed(data);
-//                        [self bindFollowByQRCode:qrcode withSmscode:@"" success:^(NSDictionary *data) {
-//                            if ([[data objectForKey:@"state"] integerValue] == 0) {
-//                                [self bindDeviceByQRCode:qrcode success:successed fail:failed];
-//                            }else if ([[data objectForKey:@"state"] integerValue] == 1){
-//                                successed(data);
-//                            }else if ([[data objectForKey:@"state"] integerValue] == 5){
-//                                successed(data);
-//                            }else{
-//                                failed([data objectForKey:@"desc"]);
-//                            }
-//                        } fail:^(NSString *error) {
-//                            failed(@"关注失败");
-//                        }];
                     }else{
-                        failed([data objectForKey:@"desc"]);
+                        if ([[data objectForKey:@"state"] integerValue] == 2) {
+                            //关注 （被别人绑定之后）
+                            successed(data);
+                            //                        [self bindFollowByQRCode:qrcode withSmscode:@"" success:^(NSDictionary *data) {
+                            //                            if ([[data objectForKey:@"state"] integerValue] == 0) {
+                            //                                [self bindDeviceByQRCode:qrcode success:successed fail:failed];
+                            //                            }else if ([[data objectForKey:@"state"] integerValue] == 1){
+                            //                                successed(data);
+                            //                            }else if ([[data objectForKey:@"state"] integerValue] == 5){
+                            //                                successed(data);
+                            //                            }else{
+                            //                                failed([data objectForKey:@"desc"]);
+                            //                            }
+                            //                        } fail:^(NSString *error) {
+                            //                            failed(@"关注失败");
+                            //                        }];
+                        }else{
+                            failed([data objectForKey:@"desc"]);
+                        }
                     }
                 }
+                
             } failed:^(NSString *error) {
                 failed(error);
             }];
@@ -111,30 +121,41 @@
             NSDictionary *body = [self returnParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuradDeviceApi finished:^(NSDictionary *data) {
-                if ([[data objectForKey:@"state"] integerValue] == 0) {
-                    successed(data);
+                //token失效时
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self bindDeviceByPid:pid withKey:akey success:successed fail:failed];
+                        }
+                    }];
                 }else{
-                    if ([[data objectForKey:@"state"] integerValue] == 2) {
-                        //关注 （被别人绑定之后）
+                    if ([[data objectForKey:@"state"] integerValue] == 0) {
                         successed(data);
-//                        [self bindFollowByPid:pid withKey:akey withSmscode:@"" success:^(NSDictionary *data) {
-//                            if ([[data objectForKey:@"state"] integerValue] == 0) {
-//                                [self bindDeviceByPid:pid withKey:akey success:successed fail:failed];
-//                            }else if ([[data objectForKey:@"state"] integerValue] == 1){
-//                                successed(data);
-//                            }else if ([[data objectForKey:@"state"] integerValue] == 5){
-//                                successed(data);
-//                            }else{
-//                                failed([data objectForKey:@"desc"]);
-//                            }
-//                        } fail:^(NSString *error) {
-//                            failed(@"关注失败");
-//                        }];
-                        
                     }else{
-                        failed([data objectForKey:@"desc"]);
+                        if ([[data objectForKey:@"state"] integerValue] == 2) {
+                            //关注 （被别人绑定之后）
+                            successed(data);
+                            //                        [self bindFollowByPid:pid withKey:akey withSmscode:@"" success:^(NSDictionary *data) {
+                            //                            if ([[data objectForKey:@"state"] integerValue] == 0) {
+                            //                                [self bindDeviceByPid:pid withKey:akey success:successed fail:failed];
+                            //                            }else if ([[data objectForKey:@"state"] integerValue] == 1){
+                            //                                successed(data);
+                            //                            }else if ([[data objectForKey:@"state"] integerValue] == 5){
+                            //                                successed(data);
+                            //                            }else{
+                            //                                failed([data objectForKey:@"desc"]);
+                            //                            }
+                            //                        } fail:^(NSString *error) {
+                            //                            failed(@"关注失败");
+                            //                        }];
+                            
+                        }else{
+                            failed([data objectForKey:@"desc"]);
+                        }
                     }
                 }
+                
             } failed:^(NSString *error) {
                 failed(error);
             }];
@@ -166,17 +187,28 @@
             NSDictionary *body = [self returnParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuradDeviceApi finished:^(NSDictionary *data) {
-                if ([[data objectForKey:@"state"] integerValue] == 0) {
-                    successed(data);
-                }else if ([[data objectForKey:@"state"] integerValue] == 5){
-//                    NSString *scode = [data objectForKey:@"smscode"];
-//                    [self bindFollowByQRCode:qrcode withSmscode:scode success:successed fail:failed];
-                    successed(data);
-                }else if ([[data objectForKey:@"state"] integerValue] == 1){
-                    successed(data);
+                //token失效时
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self bindFollowByQRCode:qrcode withSmscode:smscode success:successed fail:failed];
+                        }
+                    }];
                 }else{
-                    failed([data objectForKey:@"desc"]);
+                    if ([[data objectForKey:@"state"] integerValue] == 0) {
+                        successed(data);
+                    }else if ([[data objectForKey:@"state"] integerValue] == 5){
+                        //                    NSString *scode = [data objectForKey:@"smscode"];
+                        //                    [self bindFollowByQRCode:qrcode withSmscode:scode success:successed fail:failed];
+                        successed(data);
+                    }else if ([[data objectForKey:@"state"] integerValue] == 1){
+                        successed(data);
+                    }else{
+                        failed([data objectForKey:@"desc"]);
+                    }
                 }
+                
             } failed:^(NSString *error) {
                 failed(error);
             }];
@@ -208,16 +240,27 @@
             NSDictionary *body = [self returnParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuradDeviceApi finished:^(NSDictionary *data) {
-                if ([[data objectForKey:@"state"] integerValue] == 0) {
-                    successed(data);
-                }else if ([[data objectForKey:@"state"] integerValue] == 5){
-                    NSString *scode = [data objectForKey:@"smscode"];
-                    [self bindFollowByPid:pid withKey:akey withSmscode:scode success:successed fail:failed];
-                }else if ([[data objectForKey:@"state"] integerValue] == 1){
-                    successed(data);
+                //token失效时
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self bindFollowByPid:pid withKey:akey withSmscode:smscode success:successed fail:failed];
+                        }
+                    }];
                 }else{
-                    failed([data objectForKey:@"desc"]);
+                    if ([[data objectForKey:@"state"] integerValue] == 0) {
+                        successed(data);
+                    }else if ([[data objectForKey:@"state"] integerValue] == 5){
+                        NSString *scode = [data objectForKey:@"smscode"];
+                        [self bindFollowByPid:pid withKey:akey withSmscode:scode success:successed fail:failed];
+                    }else if ([[data objectForKey:@"state"] integerValue] == 1){
+                        successed(data);
+                    }else{
+                        failed([data objectForKey:@"desc"]);
+                    }
                 }
+                
             } failed:^(NSString *error) {
                 failed(error);
             }];
@@ -246,7 +289,18 @@
             NSDictionary *body = [self returnParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuradDeviceApi finished:^(NSDictionary *data) {
-                successed(data);
+                //token失效时
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self unBindDeviceByPid:pid withKey:akey withMainacc:mainacc success:successed fail:failed];
+                        }
+                    }];
+                }else{
+                    successed(data);
+                }
+                
             } failed:^(NSString *error) {
                 failed(error);
             }];
@@ -275,7 +329,17 @@
             NSDictionary *body = [self returnParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuradDeviceApi finished:^(NSDictionary *data) {
-                successed(data);
+                //token失效时
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self unBindDeviceByQrcode:qrcode withMainacc:mainacc success:successed fail:failed];
+                        }
+                    }];
+                }else{
+                    successed(data);
+                }
             } failed:^(NSString *error) {
                 failed(error);
             }];
@@ -305,7 +369,17 @@
             NSDictionary *body = [self returnParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuradDeviceApi finished:^(NSDictionary *data) {
-                successed(data);
+                //token失效时
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self setRelationshipWithPid:pid withRelationship:relationship success:successed fail:failed];
+                        }
+                    }];
+                }else{
+                    successed(data);
+                }
             } failed:^(NSString *error) {
                 failed(error);
             }];
@@ -336,7 +410,17 @@
             NSDictionary *body = [self returnParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuradDeviceApi finished:^(NSDictionary *data) {
-                successed(data);
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self deviceListSuccess:successed fail:failed];
+                        }
+                    }];
+                }else{
+                    successed(data);
+                }
+                
             } failed:^(NSString *error) {
                 failed(error);
             }];
@@ -365,7 +449,16 @@
             NSDictionary *body = [self returnParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuradDeviceApi finished:^(NSDictionary *data) {
-                successed(data);
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self deviceInfoPid:pid success:successed fail:failed];
+                        }
+                    }];
+                }else{
+                    successed(data);
+                }
             } failed:^(NSString *error) {
                 failed(error);
             }];
@@ -394,7 +487,17 @@
             NSDictionary *body = [self returnParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuradDeviceApi finished:^(NSDictionary *data) {
-                successed(data);
+                //token失效时
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self updateDeviceInfoPid:pid withAssetname:asset_name withSex:sex success:successed fail:failed];
+                        }
+                    }];
+                }else{
+                    successed(data);
+                }
             } failed:^(NSString *error) {
                 failed(error);
             }];
@@ -423,7 +526,17 @@
             NSDictionary *body = [self returnParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuradDeviceApi finished:^(NSDictionary *data) {
-                successed(data);
+                //token失效时
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self deviceBindInfoPid:pid success:successed fail:failed];
+                        }
+                    }];
+                }else{
+                    successed(data);
+                }
             } failed:^(NSString *error) {
                 failed(error);
             }];
@@ -452,7 +565,17 @@
             NSDictionary *body = [self returnParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuradDeviceApi finished:^(NSDictionary *data) {
-                successed(data);
+                //token失效时
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self startStepsPid:pid success:successed fail:failed];
+                        }
+                    }];
+                }else{
+                    successed(data);
+                }
             } failed:^(NSString *error) {
                 failed(error);
             }];
@@ -482,11 +605,22 @@
             NSDictionary *body = [self returnParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuradDeviceApi finished:^(NSDictionary *data) {
-                if ([[data objectForKey:@"state"] integerValue] == 0) {
-                    successed(data);
+                //token失效时
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self bindBaiduPushWithUserid:userid withChannelid:channelid withAppid:appid success:successed fail:failed];
+                        }
+                    }];
                 }else{
-                    failed([data objectForKey:@"desc"]);
+                    if ([[data objectForKey:@"state"] integerValue] == 0) {
+                        successed(data);
+                    }else{
+                        failed([data objectForKey:@"desc"]);
+                    }
                 }
+                
             } failed:^(NSString *error) {
                 failed(error);
             }];
@@ -515,11 +649,22 @@
             NSDictionary *body = [self returnParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuradDeviceApi finished:^(NSDictionary *data) {
-                if ([[data objectForKey:@"state"] integerValue] == 0) {
-                    successed(data);
+                //token失效时
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self bindJpushWithRegisterid:registerid success:successed fail:failed];
+                        }
+                    }];
                 }else{
-                    failed([data objectForKey:@"desc"]);
+                    if ([[data objectForKey:@"state"] integerValue] == 0) {
+                        successed(data);
+                    }else{
+                        failed([data objectForKey:@"desc"]);
+                    }
                 }
+                
             } failed:^(NSString *error) {
                 failed(error);
             }];

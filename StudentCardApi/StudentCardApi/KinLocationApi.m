@@ -57,7 +57,17 @@
             NSDictionary *body = [self returnParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuardLocationApi finished:^(NSDictionary *data) {
-                successed(data);
+                //token失效时
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self startNormalLocation:pid success:successed fail:failed];
+                        }
+                    }];
+                }else{
+                    successed(data);
+                }
             } failed:^(NSString *error) {
                 failed(error);
             }];
@@ -87,7 +97,17 @@
             NSDictionary *body = [self returnParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuardLocationApi finished:^(NSDictionary *data) {
-                successed(data);
+                //token失效时
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self startNormalLocation:pid success:successed fail:failed];
+                        }
+                    }];
+                }else{
+                    successed(data);
+                }
             } failed:^(NSString *error) {
                 failed(error);
             }];
@@ -117,7 +137,17 @@
             NSDictionary *body = [self returnParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuardLocationApi finished:^(NSDictionary *data) {
-                successed(data);
+                //token失效时
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self startNormalLocation:pid success:successed fail:failed];
+                        }
+                    }];
+                }else{
+                    successed(data);
+                }
             } failed:^(NSString *error) {
                 failed(error);
             }];
@@ -147,7 +177,17 @@
             NSDictionary *body = [self returnParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuardLocationApi finished:^(NSDictionary *data) {
-                successed(data);
+                //token失效时
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self readLocationInfo:pid success:successed fail:failed];
+                        }
+                    }];
+                }else{
+                    successed(data);
+                }
             } failed:^(NSString *error) {
                 failed(error);
             }];
@@ -177,7 +217,17 @@
             NSDictionary *body = [self returnParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuardLocationApi finished:^(NSDictionary *data) {
-                successed(data);
+                //token失效时
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self readLocationInfo:pid success:successed fail:failed];
+                        }
+                    }];
+                }else{
+                    successed(data);
+                }
             } failed:^(NSString *error) {
                 failed(error);
             }];
@@ -207,7 +257,17 @@
             NSDictionary *body = [self returnParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuardLocationApi finished:^(NSDictionary *data) {
-                successed(data);
+                //token失效时
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self getLocationByPid:pid withLocationToken:token success:successed fail:failed];
+                        }
+                    }];
+                }else{
+                    successed(data);
+                }
             } failed:^(NSString *error) {
                 failed(error);
             }];
@@ -237,7 +297,17 @@
             NSDictionary *body = [self returnParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuardLocationApi finished:^(NSDictionary *data) {
-                successed(data);
+                //token失效时
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self setSecZone:pid withAction:action withAddr:addr withLng:lng withLat:lat withIntime:intime withOuttime:outtime withDays:days withRadius:radius withTokenno:tokenno success:nil fail:nil];
+                        }
+                    }];
+                }else{
+                    successed(data);
+                }
             } failed:^(NSString *error) {
                 failed(error);
             }];
@@ -267,7 +337,17 @@
             NSDictionary *body = [self returnParamers:keyValueString];
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuardLocationApi finished:^(NSDictionary *data) {
-                successed(data);
+                //token失效时
+                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                    [KinGuardTool getLoginToken:^(BOOL finish) {
+                        if (YES) {
+                            //获取token成功后重新调用本方法
+                            [self getSecZonePid:pid success:successed fail:failed];
+                        }
+                    }];
+                }else{
+                    successed(data);
+                }
             } failed:^(NSString *error) {
                 failed(error);
             }];
