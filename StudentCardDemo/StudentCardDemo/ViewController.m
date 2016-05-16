@@ -158,11 +158,11 @@
 {
 
      //通过二维码绑定
-     [[KinDeviceApi sharedKinDevice] bindDeviceByQRCode:@"042bd75cb0bf4cdcad4d77038baec47e3ec5" success:^(NSDictionary *data) {
-          NSLog(@"qrcode:%@",data);
-     } fail:^(NSString *error) {
-          NSLog(@"qrcode:%@",error);
-     }];
+//     [[KinDeviceApi sharedKinDevice] bindDeviceByQRCode:@"042bd75cb0bf4cdcad4d77038baec47e3ec5" success:^(NSDictionary *data) {
+//          NSLog(@"qrcode:%@",data);
+//     } fail:^(NSString *error) {
+//          NSLog(@"qrcode:%@",error);
+//     }];
  
      
      //通过设备 ID 绑定
@@ -231,11 +231,11 @@
 //    }];
     
     //监护人信息
-//    [[KinDeviceApi sharedKinDevice] deviceBindInfoPid:@"c202237b" success:^(NSDictionary *data) {
-//        NSLog(@"deviceBindInfo:%@",data);
-//    } fail:^(NSString *error) {
-//        NSLog(@"deviceBindInfo:%@",error);
-//    }];
+    [[KinDeviceApi sharedKinDevice] deviceBindInfoPid:@"c202237b" success:^(NSDictionary *data) {
+        NSLog(@"deviceBindInfo:%@",data);
+    } fail:^(NSString *error) {
+        NSLog(@"deviceBindInfo:%@",error);
+    }];
     
     //开始记步
 //    [[KinDeviceApi sharedKinDevice] startStepsPid:@"c202237b" success:^(NSDictionary *data) {

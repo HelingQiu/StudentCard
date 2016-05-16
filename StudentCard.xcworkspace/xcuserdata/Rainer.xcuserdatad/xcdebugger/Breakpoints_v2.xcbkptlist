@@ -26,13 +26,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudentCardApi/StudentCardApi/KinDeviceApi.m"
-            timestampString = "484498899.950399"
+            timestampString = "485106951.154654"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
             landmarkName = "-bindFollowByQRCode:withSmscode:success:fail:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[KinDeviceApi bindFollowByQRCode:withSmscode:success:fail:]"
+                  moduleName = "StudentCardApi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/qiuheling/GitHub/StudentCard/StudentCardApi/StudentCardApi/KinDeviceApi.m"
+                  timestampString = "485107336.090892"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "189"
+                  endingLineNumber = "189"
+                  offsetFromSymbolStart = "780">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__60-[KinDeviceApi bindFollowByQRCode:withSmscode:success:fail:]_block_invoke112"
+                  moduleName = "StudentCardApi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/qiuheling/GitHub/StudentCard/StudentCardApi/StudentCardApi/KinDeviceApi.m"
+                  timestampString = "485107336.091273"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "189"
+                  endingLineNumber = "189"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -42,27 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudentCardApi/StudentCardApi/KinDeviceApi.m"
-            timestampString = "484498899.950399"
+            timestampString = "485106951.154654"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "-bindDeviceByQRCode:success:fail:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "StudentCardApi/StudentCardApi/KinDeviceApi.m"
-            timestampString = "484498899.950399"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "-bindDeviceByPid:withKey:success:fail:"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,7 +106,7 @@
                   moduleName = "StudentCardApi"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qiuheling/GitHub/StudentCard/StudentCardApi/StudentCardApi/KinLocationApi.m"
-                  timestampString = "484499705.419497"
+                  timestampString = "485107336.094738"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
@@ -105,12 +121,12 @@
                   moduleName = "StudentCardApi"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qiuheling/GitHub/StudentCard/StudentCardApi/StudentCardApi/KinLocationApi.m"
-                  timestampString = "484499705.419856"
+                  timestampString = "485107336.095719"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
                   endingLineNumber = "59"
-                  offsetFromSymbolStart = "36">
+                  offsetFromSymbolStart = "46">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -160,6 +176,22 @@
             startingLineNumber = "258"
             endingLineNumber = "258"
             landmarkName = "-uploadFileToPath:andFileData:fileName:name:mimeType:params:uploadProgress:finished:failed:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StudentCardApi/StudentCardApi/KinDeviceApi.m"
+            timestampString = "485107112.268067"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "530"
+            endingLineNumber = "530"
+            landmarkName = "-deviceBindInfoPid:success:fail:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

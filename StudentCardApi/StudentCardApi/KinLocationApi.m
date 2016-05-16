@@ -58,7 +58,7 @@
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuardLocationApi finished:^(NSDictionary *data) {
                 //token失效时
-                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                if ([data isKindOfClass:[NSDictionary class]] && [[data objectForKey:@"state:"] integerValue] == 401) {
                     [KinGuardTool getLoginToken:^(BOOL finish) {
                         if (YES) {
                             //获取token成功后重新调用本方法
@@ -98,7 +98,7 @@
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuardLocationApi finished:^(NSDictionary *data) {
                 //token失效时
-                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                if ([data isKindOfClass:[NSDictionary class]] && [[data objectForKey:@"state:"] integerValue] == 401) {
                     [KinGuardTool getLoginToken:^(BOOL finish) {
                         if (YES) {
                             //获取token成功后重新调用本方法
@@ -138,7 +138,7 @@
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuardLocationApi finished:^(NSDictionary *data) {
                 //token失效时
-                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                if ([data isKindOfClass:[NSDictionary class]] && [[data objectForKey:@"state:"] integerValue] == 401) {
                     [KinGuardTool getLoginToken:^(BOOL finish) {
                         if (YES) {
                             //获取token成功后重新调用本方法
@@ -178,7 +178,7 @@
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuardLocationApi finished:^(NSDictionary *data) {
                 //token失效时
-                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                if ([data isKindOfClass:[NSDictionary class]] && [[data objectForKey:@"state:"] integerValue] == 401) {
                     [KinGuardTool getLoginToken:^(BOOL finish) {
                         if (YES) {
                             //获取token成功后重新调用本方法
@@ -218,7 +218,7 @@
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuardLocationApi finished:^(NSDictionary *data) {
                 //token失效时
-                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                if ([data isKindOfClass:[NSDictionary class]] && [[data objectForKey:@"state:"] integerValue] == 401) {
                     [KinGuardTool getLoginToken:^(BOOL finish) {
                         if (YES) {
                             //获取token成功后重新调用本方法
@@ -258,7 +258,7 @@
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuardLocationApi finished:^(NSDictionary *data) {
                 //token失效时
-                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                if ([data isKindOfClass:[NSDictionary class]] && [[data objectForKey:@"state:"] integerValue] == 401) {
                     [KinGuardTool getLoginToken:^(BOOL finish) {
                         if (YES) {
                             //获取token成功后重新调用本方法
@@ -298,7 +298,7 @@
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuardLocationApi finished:^(NSDictionary *data) {
                 //token失效时
-                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                if ([data isKindOfClass:[NSDictionary class]] && [[data objectForKey:@"state:"] integerValue] == 401) {
                     [KinGuardTool getLoginToken:^(BOOL finish) {
                         if (YES) {
                             //获取token成功后重新调用本方法
@@ -338,7 +338,7 @@
             
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuardLocationApi finished:^(NSDictionary *data) {
                 //token失效时
-                if ([[data objectForKey:@"state:"] integerValue] == 401) {
+                if ([data isKindOfClass:[NSDictionary class]] && [[data objectForKey:@"state:"] integerValue] == 401) {
                     [KinGuardTool getLoginToken:^(BOOL finish) {
                         if (YES) {
                             //获取token成功后重新调用本方法
