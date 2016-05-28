@@ -42,7 +42,7 @@
                   moduleName = "StudentCardApi"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qiuheling/GitHub/StudentCard/StudentCardApi/StudentCardApi/KinDeviceApi.m"
-                  timestampString = "485107336.090892"
+                  timestampString = "485190382.877104"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "189"
@@ -57,7 +57,7 @@
                   moduleName = "StudentCardApi"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qiuheling/GitHub/StudentCard/StudentCardApi/StudentCardApi/KinDeviceApi.m"
-                  timestampString = "485107336.091273"
+                  timestampString = "485190382.877329"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "189"
@@ -106,7 +106,7 @@
                   moduleName = "StudentCardApi"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qiuheling/GitHub/StudentCard/StudentCardApi/StudentCardApi/KinLocationApi.m"
-                  timestampString = "485107336.094738"
+                  timestampString = "485190382.878026"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
@@ -121,12 +121,12 @@
                   moduleName = "StudentCardApi"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qiuheling/GitHub/StudentCard/StudentCardApi/StudentCardApi/KinLocationApi.m"
-                  timestampString = "485107336.095719"
+                  timestampString = "485190382.878293"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
                   endingLineNumber = "59"
-                  offsetFromSymbolStart = "46">
+                  offsetFromSymbolStart = "39">
                </Location>
             </Locations>
          </BreakpointContent>

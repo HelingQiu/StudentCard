@@ -318,14 +318,18 @@
     [[KinNetworking sharedInstance] requestDataFromWSWithParams:body forPath:KinGuardLoginApi finished:^(NSDictionary *data) {
         
         if ([[data objectForKey:@"state"] integerValue] == 0) {
-            successed(data);
+//            //获取登录token值
+//            [KinGuardTool getLoginToken:^(BOOL finish) {
+//                
+//            }];
+            
             //登录成功之后需要存储用户名和密码
             [KinGuardTool storeLoginInfo:mobile withPwd:password];
-            
-            //获取登录token值
-            [KinGuardTool getLoginToken:^(BOOL finish) {
-                
-            }];
+            if (![KinGuardTool isBlankString:[data objectForKey:@"logintoken"]]) {
+                //获取到登录token后存储在本地
+                [KinGuardTool storeLoginToken:[data objectForKey:@"logintoken"]];
+            }
+            successed(data);
         }else{
             failed([data objectForKey:@"desp"]);
         }

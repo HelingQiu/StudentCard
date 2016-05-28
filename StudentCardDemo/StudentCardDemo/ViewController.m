@@ -31,8 +31,8 @@
     
     //调用方法（请先调用登录获取token值，不要同时调用多个请求）
     
-//    [self accountOperation];
-    [self kinGuardDevice];
+    [self accountOperation];
+//    [self kinGuardDevice];
 //    [self kinGuardLocation];
 //    [self kinGuardRecord];
     
@@ -115,12 +115,12 @@
 
 
     //更新用户信息
-//    [[KinGuartApi sharedKinGuard] updateUserInfoWithMobile:@"18002566031" withAddr:@"123" withIddno:@"123" withAccName:@"123" withAlias:@"123" withSex:@"F" withBirthdate:@"2001-01-01" success:^(NSDictionary *data)
-//    {
-//        NSLog(@"updateUser:%@",data);
-//    } fail:^(NSString *error) {
-//        NSLog(@"updateUser:%@",error);
-//    }];
+    [[KinGuartApi sharedKinGuard] updateUserInfoWithMobile:@"18002566031" withAddr:@"123" withIddno:@"" withAccName:@"18002566031" withAlias:@"晶晶" withSex:@"" withBirthdate:@"" success:^(NSDictionary *data)
+    {
+        NSLog(@"updateUser:%@",data);
+    } fail:^(NSString *error) {
+        NSLog(@"updateUser:%@",error);
+    }];
     
     //获取用户信息
 //    [[KinGuartApi sharedKinGuard] getUserInfoSuccess:^(NSDictionary *data) {
@@ -231,11 +231,11 @@
 //    }];
     
     //监护人信息
-    [[KinDeviceApi sharedKinDevice] deviceBindInfoPid:@"c202237b" success:^(NSDictionary *data) {
-        NSLog(@"deviceBindInfo:%@",data);
-    } fail:^(NSString *error) {
-        NSLog(@"deviceBindInfo:%@",error);
-    }];
+//    [[KinDeviceApi sharedKinDevice] deviceBindInfoPid:@"c202237b" success:^(NSDictionary *data) {
+//        NSLog(@"deviceBindInfo:%@",data);
+//    } fail:^(NSString *error) {
+//        NSLog(@"deviceBindInfo:%@",error);
+//    }];
     
     //开始记步
 //    [[KinDeviceApi sharedKinDevice] startStepsPid:@"c202237b" success:^(NSDictionary *data) {

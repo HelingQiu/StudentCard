@@ -49,6 +49,7 @@
 //rc4加密
 + (NSString *)encryptString:(NSString *)stringToEncrypt withKey:(NSString *)key
 {
+    stringToEncrypt = [stringToEncrypt stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     int i = 0;
     int j = 0;
     unsigned char s[256];
