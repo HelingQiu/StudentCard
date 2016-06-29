@@ -71,5 +71,10 @@
  */
 #define KinDownloadFile   HOST @"/res/DownloadFile"
 
+/**
+ *  Description:获取聊天记录
+ */
+#define KinChatMessage HOST @"/res/ChatInfoCent"
+
 #endif /* HostDefines_h */
 

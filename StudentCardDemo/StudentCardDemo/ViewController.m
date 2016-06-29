@@ -31,11 +31,16 @@
     
     //调用方法（请先调用登录获取token值，不要同时调用多个请求）
     
-    [self accountOperation];
+//    [self accountOperation];
 //    [self kinGuardDevice];
 //    [self kinGuardLocation];
 //    [self kinGuardRecord];
     
+    [[KinRecordApi sharedKinRecordApi] getChatMessage:@"c202237b" finished:^(NSDictionary *data) {
+        NSLog(@"%@",data);
+    } failed:^(NSString *error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 - (IBAction)login:(id)sender {
@@ -46,6 +51,7 @@
     [[KinGuartApi sharedKinGuard] loginWithMobile:mobile withPassword:pwd success:^(NSDictionary *data) {
         NSLog(@"l:%@",data);
         [MBProgressHUD showSuccess:[data objectForKey:@"desp"]];
+//        [self kinGuardDevice];
     } fail:^(NSString *error) {
         NSLog(@"l:%@",error);
         [MBProgressHUD showError:error];
@@ -115,12 +121,12 @@
 
 
     //更新用户信息
-    [[KinGuartApi sharedKinGuard] updateUserInfoWithMobile:@"18002566031" withAddr:@"123" withIddno:@"" withAccName:@"18002566031" withAlias:@"晶晶" withSex:@"" withBirthdate:@"" success:^(NSDictionary *data)
-    {
-        NSLog(@"updateUser:%@",data);
-    } fail:^(NSString *error) {
-        NSLog(@"updateUser:%@",error);
-    }];
+//    [[KinGuartApi sharedKinGuard] updateUserInfoWithMobile:@"18002566031" withAddr:@"123" withIddno:@"" withAccName:@"18002566031" withAlias:@"晶晶" withSex:@"" withBirthdate:@"" success:^(NSDictionary *data)
+//    {
+//        NSLog(@"updateUser:%@",data);
+//    } fail:^(NSString *error) {
+//        NSLog(@"updateUser:%@",error);
+//    }];
     
     //获取用户信息
 //    [[KinGuartApi sharedKinGuard] getUserInfoSuccess:^(NSDictionary *data) {
@@ -166,11 +172,11 @@
  
      
      //通过设备 ID 绑定
-//     [[KinDeviceApi sharedKinDevice] bindDeviceByPid:@"c202237b" withKey:@"6ce68d05" success:^(NSDictionary *data) {
-//          NSLog(@"pid:%@",data);
-//     } fail:^(NSString *error) {
-//          NSLog(@"pid:%@",error);
-//     }];
+     [[KinDeviceApi sharedKinDevice] bindDeviceByPid:@"c6005a1a" withKey:@"h6651375" success:^(NSDictionary *data) {
+          NSLog(@"pid:%@",data);
+     } fail:^(NSString *error) {
+          NSLog(@"pid:%@",error);
+     }];
     
      //关注号绑定(二维码)
 //     [[KinDeviceApi sharedKinDevice] bindFollowByQRCode:@"042bd75cb0bf4cdcad4d77038baec47e3ec5" withSmscode:nil success:^(NSDictionary *data) {
@@ -211,6 +217,17 @@
 //    [[KinDeviceApi sharedKinDevice] deviceListSuccess:^(NSDictionary *data) {
 //        
 //        NSLog(@"device info:%@",data);
+//        NSArray *array = [[data objectForKey:@"pids"] componentsSeparatedByString:@","];
+//        dispatch_group_t group =  dispatch_group_create();
+//        
+//        for (NSString *pid in array) {
+//            dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
+//                [self requestDeviceInfo:pid finish:^(NSDictionary *info) {
+//                    
+//                }];
+//            });
+//            
+//        }
 //    } fail:^(NSString *error) {
 //        NSLog(@"device info:%@",error);
 //        
@@ -259,6 +276,19 @@
 //     } fail:^(NSString *error) {
 //         NSLog(@"jpush:%@",error);
 //     }];
+}
+
+- (void)requestDeviceInfo:(NSString *)pid finish:(void (^)(NSDictionary *info))block
+{
+    [[KinDeviceApi sharedKinDevice] deviceInfoPid:pid success:^(NSDictionary *data) {
+        NSLog(@"info:%@",data);
+        if (block) {
+            block(data);
+        }
+    } fail:^(NSString *error) {
+        NSLog(@"%@",error);
+    }];
+    
 }
 
 /**

@@ -49,7 +49,7 @@
         if ([[data objectForKey:@"state"] integerValue] == 0) {
             successed(data);
         }else{
-            failed([data objectForKey:@"desc"]);
+            failed([data objectForKey:@"desc:"]);
         }
     } failed:^(NSString *error) {
         failed(error);
