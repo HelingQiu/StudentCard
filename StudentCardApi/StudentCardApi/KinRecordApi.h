@@ -40,6 +40,6 @@
 - (void)uploadMessageToPid:(NSString *)pid chatContent:(NSString *)chatcontent finished:(KSFinishedBlock)finished failed:(KSFailedBlock)failed;
 
 //获取群聊信息
-- (void)getChatMessage:(NSString *)pid finished:(KSFinishedBlock)finished failed:(KSFailedBlock)failed;
+- (void)getChatMessage:(NSString *)pid chatContent:(NSString *)chatcontent fromDate:(NSString *)fromDate toDate:(NSString *)toDate finished:(KSFinishedBlock)finished failed:(KSFailedBlock)failed;
 
 @end

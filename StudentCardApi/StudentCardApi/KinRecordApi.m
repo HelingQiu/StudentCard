@@ -193,7 +193,7 @@
                     [KinGuardTool getLoginToken:^(BOOL finish) {
                         if (YES) {
                             //获取token成功后重新调用本方法
-                            [self getChatMessage:pid finished:finished failed:failed];
+                            [self uploadMessageToPid:pid chatContent:chatcontent finished:finished failed:failed];
                         }
                     }];
                 }else{
@@ -207,7 +207,7 @@
 }
 
 //获取群聊信息
-- (void)getChatMessage:(NSString *)pid finished:(KSFinishedBlock)finished failed:(KSFailedBlock)failed
+- (void)getChatMessage:(NSString *)pid chatContent:(NSString *)chatcontent fromDate:(NSString *)fromDate toDate:(NSString *)toDate finished:(KSFinishedBlock)finished failed:(KSFailedBlock)failed
 {
     //判断是否登录
     if ([KinGuardTool isLogined]) {
@@ -215,12 +215,12 @@
         if ([KinGuardTool isBlankString:[KinGuardTool getLocalLoginToken]]) {
             [KinGuardTool getLoginToken:^(BOOL finish) {
                 if (YES) {
-                    [self getChatMessage:pid finished:finished failed:failed];
+                    [self getChatMessage:pid chatContent:chatcontent fromDate:fromDate toDate:toDate finished:finished failed:failed];
                 }
             }];
         }else{
             //token不为空
-            NSString *keyValueString = [NSString stringWithFormat:@"funname=%@&pid=%@",@"KinGuard_GetChatListInPid",pid];
+            NSString *keyValueString = [NSString stringWithFormat:@"chatcontent=%@&fromdate=%@&funname=%@&pid=%@&todate=%@",chatcontent,fromDate,@"KinGuard_GetChatListInPid",pid,toDate];
             NSDictionary *params = [KinGuardTool returnParamers:keyValueString];
             [[KinNetworking sharedInstance] requestDataFromWSWithParams:params forPath:KinChatMessage finished:^(NSDictionary *data) {
                 //token失效时
@@ -228,7 +228,7 @@
                     [KinGuardTool getLoginToken:^(BOOL finish) {
                         if (YES) {
                             //获取token成功后重新调用本方法
-                            [self getChatMessage:pid finished:finished failed:failed];
+                            [self getChatMessage:pid chatContent:chatcontent fromDate:fromDate toDate:toDate finished:finished failed:failed];
                         }
                     }];
                 }else{

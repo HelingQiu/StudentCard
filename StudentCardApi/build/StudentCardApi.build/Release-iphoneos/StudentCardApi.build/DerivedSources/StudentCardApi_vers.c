@@ -1,1 +1,0 @@
- const unsigned char StudentCardApiVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:StudentCardApi  PROJECT:StudentCardApi-1" "\n"; const double StudentCardApiVersionNumber __attribute__ ((used)) = (double)1.;
