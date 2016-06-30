@@ -36,10 +36,24 @@
 //    [self kinGuardLocation];
 //    [self kinGuardRecord];
     
-    [[KinRecordApi sharedKinRecordApi] getChatMessage:@"c202237b" finished:^(NSDictionary *data) {
-        NSLog(@"%@",data);
+//    [[KinRecordApi sharedKinRecordApi] getChatMessage:@"c202237b" finished:^(NSDictionary *data) {
+//        NSLog(@"%@",data);
+//    } failed:^(NSString *error) {
+//        NSLog(@"%@",error);
+//    }];
+    
+//    [[KinRecordApi sharedKinRecordApi] getChatMessage:@"c202237b" chatContent:@"" fromDate:@"00:00:00" toDate:@"23:59:59" finished:^(NSDictionary *data) {
+//        
+//        NSLog(@"success%@",data);
+//    } failed:^(NSString *error) {
+//        
+//        NSLog(@"error%@",error);
+//        
+//    }];
+    [[KinRecordApi sharedKinRecordApi] recordInfomationWithDeviceId:@"c2025a1a" andFinished:^(NSDictionary *data) {
+        NSLog(@"data:%@",data);
     } failed:^(NSString *error) {
-        NSLog(@"%@",error);
+        NSLog(@"error%@",error);
     }];
 }
 

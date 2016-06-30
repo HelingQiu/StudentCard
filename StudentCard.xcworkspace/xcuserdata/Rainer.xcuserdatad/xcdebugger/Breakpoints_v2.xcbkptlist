@@ -42,7 +42,7 @@
                   moduleName = "StudentCardApi"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qiuheling/GitHub/StudentCard/StudentCardApi/StudentCardApi/KinDeviceApi.m"
-                  timestampString = "488906491.938164"
+                  timestampString = "488999181.144693"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "177"
@@ -57,7 +57,7 @@
                   moduleName = "StudentCardApi"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qiuheling/GitHub/StudentCard/StudentCardApi/StudentCardApi/KinDeviceApi.m"
-                  timestampString = "488906491.938417"
+                  timestampString = "488999181.144971"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "177"
@@ -90,7 +90,7 @@
                   moduleName = "StudentCardApi"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qiuheling/GitHub/StudentCard/StudentCardApi/StudentCardApi/KinLocationApi.m"
-                  timestampString = "488906491.938801"
+                  timestampString = "488999181.145397"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
@@ -105,7 +105,7 @@
                   moduleName = "StudentCardApi"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/qiuheling/GitHub/StudentCard/StudentCardApi/StudentCardApi/KinLocationApi.m"
-                  timestampString = "488906491.93894"
+                  timestampString = "488999181.145707"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudentCardDemo/StudentCardDemo/ViewController.m"
-            timestampString = "488904793.071023"
+            timestampString = "488998368.543672"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
             landmarkName = "-kinGuardDevice"
             landmarkType = "5">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudentCardDemo/StudentCardDemo/ViewController.m"
-            timestampString = "488904793.071023"
+            timestampString = "488998368.543672"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
             landmarkName = "-kinGuardDevice"
             landmarkType = "5">
          </BreakpointContent>
@@ -230,49 +230,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StudentCardApi/StudentCardApi/KinRecordApi.m"
+            timestampString = "488996886.230234"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
+            landmarkName = "-getChatMessage:chatContent:fromDate:toDate:finished:failed:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudentCardApi/StudentCardApi/KinNetworking.m"
-            timestampString = "488905223.816085"
+            timestampString = "488999173.8175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "-requestDataFromWSWithParams:forPath:finished:failed:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[KinNetworking requestDataFromWSWithParams:forPath:finished:failed:]"
-                  moduleName = "StudentCardApi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/qiuheling/GitHub/StudentCard/StudentCardApi/StudentCardApi/KinNetworking.m"
-                  timestampString = "488905336.155441"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "383">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__69-[KinNetworking requestDataFromWSWithParams:forPath:finished:failed:]_block_invoke"
-                  moduleName = "StudentCardApi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/qiuheling/GitHub/StudentCard/StudentCardApi/StudentCardApi/KinNetworking.m"
-                  timestampString = "488905336.155635"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "44">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StudentCardApi/StudentCardApi/KinNetworking.m"
+            timestampString = "488999176.806213"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "-requestDataFromWSWithParams:forPath:finished:failed:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
