@@ -49,7 +49,28 @@
         if ([[data objectForKey:@"state"] integerValue] == 0) {
             successed(data);
         }else{
-            failed([data objectForKey:@"desc:"]);
+            NSString *error = nil;
+            NSInteger state = [[data objectForKey:@"state"] integerValue];
+            if (state == 1) {
+                error = @"解密出错";
+            }else if (state == 2) {
+                error = @"手机号参数缺失";
+            }else if (state == 3) {
+                error = @"密码参数缺失";
+            }else if (state == 4) {
+                error = @"短信验证码错误或短信验证码已过期失效";
+            }else if (state == 5) {
+                error = @"该手机号已注册";
+            }else if (state == 6) {
+                error = @"appkey 和 appsecret 错误";
+            }else if (state == 7) {
+                error = @"手机号需短信验证";
+            }else if (state == 8) {
+                error = @"账号格式错误";
+            }else if (state == 9) {
+                error = @"其他原因造成的注册失败";
+            }
+            failed(error);
         }
     } failed:^(NSString *error) {
         failed(error);
